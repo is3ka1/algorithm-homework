@@ -134,14 +134,10 @@ void counting_sort(Array array, int min, int max) {
     free(count);
 }
 
-Array uniform_cs_data(Array array, int min, int max) {
-    Array result = (Array) {
-        .head = realloc(array.head, sizeof(int) * (array.len + 2)),
-        .len = array.len
-    };
-    result.head[array.len] = min;
-    result.head[array.len + 1] = max;
-    return result;
+void uniform_cs_data(Array *array, int min, int max) {
+    array->head = (int *)realloc(array->head, sizeof(int) * (array->len + 2));
+    array->head[array->len] = min;
+    array->head[array->len + 1] = max;
 }
 
 void uniform_counting_sort(Array array) {
@@ -227,9 +223,9 @@ void calculate_cost(int seq_size, int min, int max, int algo, int stdin_mode, do
         sort = quick_sort;
         break;
     case 4:
-        uniform_cs_data(ascending_array, 0, seq_size);
-        uniform_cs_data(descending_array, 0, seq_size);
-        uniform_cs_data(random_array, min, max);
+        uniform_cs_data(&ascending_array, 0, seq_size);
+        uniform_cs_data(&descending_array, 0, seq_size);
+        uniform_cs_data(&random_array, min, max);
         sort = uniform_counting_sort;
         break;
     case 5:
