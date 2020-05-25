@@ -1,7 +1,7 @@
-# Five Sorting Algorithm with Roughly cost time measurement
+# Five Sorting Algorithms With Roughly Measurement Of The Time Spent
 
-## Compile with `DEBUG` macro
-### With sorting steps being output
+## Compile With `DEBUG` Macro
+### with sorting steps being output
 
     gcc main.c -DDEBUG=1 -o main
 
@@ -9,16 +9,16 @@ or
 
     gcc main.c -o main
 
-### The silence one
+### the silence one
 
     gcc main.c -DDEBUG=0 -o main
 
 ## Run
 
-### With `stdin` input
+### with `stdin` input
     ./main
 
-### With Command Line argument
+### with command line argument
 
     ./main seq_size min max algo
 
