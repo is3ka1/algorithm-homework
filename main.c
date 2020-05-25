@@ -302,7 +302,7 @@ int main(int argc, char const *argv[]) {
         int algo = atoi(argv[4]);
         double costs[3];
         calculate_cost(seq_size, min, max, algo, 0, costs);
-        printf("%f,%f,%f\n", costs[0], costs[1], costs[2]);
+        printf("%d,%f,%f,%f\n", seq_size, costs[0], costs[1], costs[2]);
     }
     return 0;
 }
