@@ -1,6 +1,8 @@
 algorithms=([1]="exchange_sort" [2]="merge_sort" [3]="quick_sort" [4]="counting_sort" [5]="heap_sort")
 
 [ ! -f ./main ] && gcc main.c -DDEBUG=0 -o main
+[ ! -d ./data ] && mkdir data
+
 if [ $# == 0 ];then
     NUMS=$(seq 100 100 1000)
 else
@@ -13,6 +15,6 @@ do
     for n in $NUMS
     do
         echo n: ${n}
-        ./main ${n} -1000 1000 ${algo} >>${algorithms[$[algo]]}.csv
+        ./main ${n} -1000 1000 ${algo} >> ./data/${algorithms[$[algo]]}.csv
     done
 done
