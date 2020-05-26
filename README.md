@@ -40,5 +40,13 @@ Sorting Algorithm Available:
 4. counting_sort
 5. heap_sort
 
+## Measure with measure.sh script
+    bash ./measure.sh
+   
+specify with custome range:
+    bash ./measure.sh $(seq low step high)
 
+## Plot using plot_graphs.py script
+
+    pipenv run python plot_graphs.py
 
