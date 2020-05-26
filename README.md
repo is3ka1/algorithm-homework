@@ -44,6 +44,7 @@ Sorting Algorithm Available:
     bash ./measure.sh
    
 specify with custome range:
+
     bash ./measure.sh $(seq low step high)
 
 ## Plot using plot_graphs.py script
