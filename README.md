@@ -50,4 +50,9 @@ specify with custome range:
 ## Plot using plot_graphs.py script
 
     pipenv run python plot_graphs.py
-
+## Measurement
+![Counting Sort](/example/graph/counting_sort.png)
+![Exchange Sort](/example/graph/exchange_sort.png)
+![Heap Sort](/example/graph/heap_sort.png)
+![Merge Sort](/example/graph/merge_sort.png)
+![Quick Sort](/example/graph/quick_sort.png)
